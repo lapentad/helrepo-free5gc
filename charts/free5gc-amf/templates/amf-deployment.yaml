@@ -69,8 +69,6 @@ spec:
         securityContext:
             {{- toYaml .securityContext | nindent 12 }}
         ports:
-        - containerPort: {{ .service.port }}
-        ports:
         - name: namf
           containerPort: {{ .service.port }}
         {{- if $.Values.isNgapNeeded }}
